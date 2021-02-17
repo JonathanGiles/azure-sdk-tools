@@ -18,8 +18,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pom implements MavenGAV {
-    private Gav gav;
-    private Gav parent;
+    private MavenGAV gav;
+    private MavenGAV parent;
     private List<Dependency> dependencies;
 
     private Float jacocoMinLineCoverage;
@@ -94,7 +94,7 @@ public class Pom implements MavenGAV {
         return gav.getVersion() != null ? gav.getVersion() : parent.getVersion();
     }
 
-    public Gav getParent() {
+    public MavenGAV getParent() {
         return parent;
     }
 
